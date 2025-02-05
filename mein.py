@@ -1,7 +1,7 @@
 import requests
 
 
-LOCATION = [
+LOCATIONS = [
     'london',
     'svo',
     'Череповец',
@@ -17,7 +17,7 @@ PAYLOAD = {
 
 
 def main():
-    for a in LOCATION:
+    for location in LOCATIONS:
         url = 'https://wttr.in/{}'.format(a)
         response = requests.get(url, params=PAYLOAD)
         response.raise_for_status()
